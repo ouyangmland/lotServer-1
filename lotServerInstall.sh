@@ -102,7 +102,7 @@ function Install()
   elif [ -f /appex/bin/lotServer.sh ]; then
     bash /appex/bin/lotServer.sh status
   fi
-  wget --no-check-certificate -qO "/usr/lib/systemd/system/lotserver.service" "https://raw.githubusercontent.com/ouyangmland/lotServer/master/lotserver.service"
+  wget --no-check-certificate -qO "/usr/lib/systemd/system/lotserver.service" "https://raw.githubusercontent.com/ouyangmland/lotServer-1/master/lotserver.service"
   systemctl enable lotserver.service
   exit 0
 }

@@ -1,0 +1,12 @@
+[Unit]
+Description=lotserver
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+ExecStart=/appex/bin/lotServer.sh start
+ExecReload=/appex/bin/lotServer.sh reload
+ExecStop=/appex/bin/lotServer.sh stop
+
+[Install]
+WantedBy=multi-user.target
